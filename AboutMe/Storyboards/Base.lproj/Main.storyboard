@@ -39,7 +39,7 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="mAa-r5-0Bs" kind="presentation" modalPresentationStyle="fullScreen" id="zX2-wg-IZ2"/>
+                                                    <segue destination="XIQ-Xl-UJg" kind="presentation" modalPresentationStyle="fullScreen" id="zX2-wg-IZ2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -96,11 +96,11 @@
             <objects>
                 <viewController title="WelcomeViewController" id="mAa-r5-0Bs" customClass="WelcomeViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hcs-0y-RFb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ae3-VT-gQ8">
-                                <rect key="frame" x="117.5" y="408" width="85" height="35"/>
+                                <rect key="frame" x="117.5" y="359" width="85" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Erd-Or-rsP"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="HhG-XL-u1W"/>
@@ -134,7 +134,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhT-mM-1Vt">
-                                <rect key="frame" x="117" y="275" width="86" height="95.5"/>
+                                <rect key="frame" x="116" y="245" width="86" height="95.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -142,17 +142,17 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r7d-Fg-pUS"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
-                        <color key="tintColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JQu-sg-dtP" firstAttribute="leading" secondItem="r7d-Fg-pUS" secondAttribute="leading" constant="16" id="Rqb-cR-SKR"/>
                             <constraint firstItem="r7d-Fg-pUS" firstAttribute="trailing" secondItem="JQu-sg-dtP" secondAttribute="trailing" constant="16" id="UKS-aV-W1R"/>
                             <constraint firstItem="ae3-VT-gQ8" firstAttribute="centerX" secondItem="Hcs-0y-RFb" secondAttribute="centerX" id="c0v-S2-gvr"/>
-                            <constraint firstItem="rhT-mM-1Vt" firstAttribute="top" secondItem="JQu-sg-dtP" secondAttribute="bottom" constant="57" id="dez-kg-yiR"/>
-                            <constraint firstItem="rhT-mM-1Vt" firstAttribute="centerX" secondItem="Hcs-0y-RFb" secondAttribute="centerX" id="kib-7D-TXi"/>
+                            <constraint firstItem="rhT-mM-1Vt" firstAttribute="top" secondItem="JQu-sg-dtP" secondAttribute="bottom" constant="27" id="dez-kg-yiR"/>
+                            <constraint firstItem="rhT-mM-1Vt" firstAttribute="centerX" secondItem="Hcs-0y-RFb" secondAttribute="centerX" constant="-1" id="kib-7D-TXi"/>
                             <constraint firstItem="r7d-Fg-pUS" firstAttribute="bottom" secondItem="ae3-VT-gQ8" secondAttribute="bottom" constant="125" id="snT-TF-0KL"/>
                             <constraint firstItem="JQu-sg-dtP" firstAttribute="top" secondItem="r7d-Fg-pUS" secondAttribute="top" constant="150" id="tHU-KM-e4o"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.circle.fill" catalog="system" id="4ah-dm-XaP"/>
                     <connections>
                         <outlet property="myNameLabel" destination="sem-1g-Hk2" id="K4b-a0-8QH"/>
                         <outlet property="welcomeLabel" destination="zVE-LH-MF4" id="RfX-Fo-LyV"/>
@@ -161,10 +161,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Eb-jq-3EG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="6gw-uK-sXo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="964" y="770"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="5vt-AQ-fDu">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XIQ-Xl-UJg" customClass="TabBarViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="C54-WL-BF9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mAa-r5-0Bs" kind="relationship" relationship="viewControllers" id="Uh1-Wl-w4P"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5BM-CG-D01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="963.75" y="-23.239436619718312"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
