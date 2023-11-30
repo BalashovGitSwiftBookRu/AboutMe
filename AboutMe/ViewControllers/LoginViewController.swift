@@ -20,6 +20,13 @@ final class LoginViewController: UIViewController {
     private let password = "111"
     
     // MARK: - Override Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTextField.text = user
+        passwordTextField.text = password
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = user
