@@ -83,8 +83,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginTextField" destination="XNe-je-Q0H" id="MSX-7Z-WmW"/>
                         <outlet property="passwordTextField" destination="d69-zb-2d4" id="OTz-T8-vz3"/>
-                        <outlet property="userNameTextField" destination="XNe-je-Q0H" id="MSX-7Z-WmW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

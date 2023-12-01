@@ -12,24 +12,26 @@ import UIKit
 final class LoginViewController: UIViewController {
 
     // MARK: - IB Outlets
-    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
     // MARK: - Private Properties
-    private let user = "User"
+    private let login = "User"
     private let password = "111"
+    
+    private let user = User.getUser()
     
     // MARK: - Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameTextField.text = user
+        loginTextField.text = login
         passwordTextField.text = password
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = user
+        welcomeVC.userName = login
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,7 +40,7 @@ final class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTextField.text == user, passwordTextField.text == password else {
+        guard loginTextField.text == login, passwordTextField.text == password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password") {
@@ -52,12 +54,12 @@ final class LoginViewController: UIViewController {
     // MARK: - IB Actions
     @IBAction func forgotNamePassword(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(title: "Oops!", message: "Your name is \(user) 😉")
+            ? showAlert(title: "Oops!", message: "Your login is \(login) 😉")
             : showAlert(title: "Oops!", message: "Your password is \(password) 😉")
     }
     
     @IBAction func unwindToLoginVC(for segue: UIStoryboardSegue) {
-        userNameTextField.text = ""
+        loginTextField.text = ""
         passwordTextField.text = ""
     }
 
