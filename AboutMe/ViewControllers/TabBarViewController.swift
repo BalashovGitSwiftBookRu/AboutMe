@@ -2,7 +2,7 @@
 //  TabBarViewController.swift
 //  AboutMe
 //
-//  Created by Barys Zhiznevsky on 11/30/23.
+//  Created by Sergey Balashov on 11/30/23.
 //
 
 import UIKit
@@ -16,8 +16,5 @@ class TabBarViewController: UITabBarController {
         tabBarAppearance.configureWithOpaqueBackground()
         tabBar.standardAppearance = tabBarAppearance
         tabBar.scrollEdgeAppearance = tabBarAppearance
-        
-        
-
     }
 }
