@@ -42,7 +42,6 @@ final class LoginViewController: UIViewController {
                 let personVC = navigationVC.topViewController as? PersonViewController
                 
                 personVC?.user = user
-                //personVC?.title = "New Person"
             }
         })
     }

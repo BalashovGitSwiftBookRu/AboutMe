@@ -6,10 +6,10 @@
 //
 
 
+
 import UIKit
 
 final class PersonViewController: UIViewController {
-    
     
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
@@ -30,6 +30,8 @@ final class PersonViewController: UIViewController {
         
         navigationItem.title = "\(user.person.firstName) \(user.person.lastName)"
         
+        photoImageView.layer.cornerRadius = photoImageView.frame.size.width / 2
+        
         firstNameLabel.text = user.person.firstName
         lastNameLabel.text = user.person.lastName
         photoImageView.image = UIImage(named: user.person.photo)
@@ -42,16 +44,10 @@ final class PersonViewController: UIViewController {
         occupationLabel.text = user.person.occupation
         hobbyLabel.text = user.person.hobby
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let bioVC = segue.destination as? BioViewController
+        bioVC?.navigationItem.title = "\(user.person.firstName) \(user.person.lastName) Bio"
+        bioVC?.bio = user.person.bio
     }
-    */
-
 }
