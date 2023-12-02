@@ -34,13 +34,15 @@ final class LoginViewController: UIViewController {
         
         tabBarVC?.viewControllers?.forEach({ viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.user = user
+                welcomeVC.login = user.login
+                welcomeVC.userFirstName = user.person.firstName
+                welcomeVC.userLastName = user.person.lastName
+                
             } else if let navigationVC = viewController as? UINavigationController {
                 let personVC = navigationVC.topViewController as? PersonViewController
                 personVC?.title = "New Person"
             }
         })
-
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

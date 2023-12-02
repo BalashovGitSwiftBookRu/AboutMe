@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BioViewController: UIViewController {
+final class BioViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

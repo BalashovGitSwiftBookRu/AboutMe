@@ -18,6 +18,7 @@ struct User {
             person: Person(
                 firstName: "Sergey",
                 lastName: "Balashov",
+                photo: "balashov",
                 gender: .male,
                 pronounce: .heHisHim,
                 race: .whiteOrCaucasian,
@@ -34,6 +35,7 @@ struct User {
 struct Person {
     let firstName: String
     let lastName: String
+    let photo: String
     let gender: Gender
     let pronounce: Pronounce
     let race: Race
