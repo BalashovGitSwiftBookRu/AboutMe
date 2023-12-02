@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  AboutMe
 //
 //  Created by Sergey Balashov on 11/29/23.
@@ -22,7 +22,6 @@ final class LoginViewController: UIViewController {
     private let user = User.getUser()
     
     // MARK: - Override Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginTextField.text = login
@@ -30,8 +29,18 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = login
+        
+        let tabBarVC = segue.destination as? UITabBarController
+        
+        tabBarVC?.viewControllers?.forEach({ viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                let personVC = navigationVC.topViewController as? PersonViewController
+                personVC?.title = "New Person"
+            }
+        })
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

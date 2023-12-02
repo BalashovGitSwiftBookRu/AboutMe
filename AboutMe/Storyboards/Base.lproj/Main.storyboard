@@ -154,7 +154,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.circle.fill" catalog="system" id="4ah-dm-XaP"/>
                     <connections>
-                        <outlet property="myNameLabel" destination="sem-1g-Hk2" id="K4b-a0-8QH"/>
+                        <outlet property="userNameLabel" destination="sem-1g-Hk2" id="uR3-Nr-WeX"/>
                         <outlet property="welcomeLabel" destination="zVE-LH-MF4" id="RfX-Fo-LyV"/>
                     </connections>
                 </viewController>
@@ -166,7 +166,7 @@
         <!--Person-->
         <scene sceneID="XtA-8t-esw">
             <objects>
-                <viewController title="Person" id="nab-9A-wlF" sceneMemberID="viewController">
+                <viewController title="Person" id="nab-9A-wlF" customClass="PersonViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gpu-jB-Tt2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +188,7 @@
         <!--Bio-->
         <scene sceneID="1dO-s4-Tpr">
             <objects>
-                <viewController id="6ZP-83-EMn" sceneMemberID="viewController">
+                <viewController id="6ZP-83-EMn" customClass="BioViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ADt-aa-z2Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
